@@ -14,9 +14,9 @@ public class MessageErrorHandle {
     Logger logger = LogManager.getLogger(MessageErrorHandle.class);
 
     @ResponseBody
-    @ExceptionHandler(ProductoException.class)
+    @ExceptionHandler(ApiRestException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    ErrorMessage messageErrorHandle(ProductoException ex) {
+    ErrorMessage messageErrorHandle(ApiRestException ex) {
         logger.error(ex);
         return new ErrorMessage(ex.getMessage());
     }

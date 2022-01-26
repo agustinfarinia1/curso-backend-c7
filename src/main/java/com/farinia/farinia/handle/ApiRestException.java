@@ -1,10 +1,10 @@
 package com.farinia.farinia.handle;
 
-public class ProductoException extends Exception {
+public class ApiRestException extends Exception {
 
     private String message;
 
-    public ProductoException(String message) {
+    public ApiRestException(String message) {
         super(message);
     }
 
